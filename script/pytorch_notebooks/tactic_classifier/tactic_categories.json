@@ -1,0 +1,421 @@
+[
+  {
+    "category": "detect",
+    "sub_categories": [
+      {
+        "name": "intrusion",
+        "ignore": true,
+        "tactics": []
+      },
+      {
+        "name": "denial of service",
+        "ignore": true,
+        "tactics": []
+      },
+      {
+        "class": "data integrity",
+        "label": "Data Integrity",
+        "name": "Data Integrity",
+        "file_name": "data_integrity",
+        "ignore": false,
+        "tactics": [
+          {
+            "class": "sha512",
+            "label": "SHA512",
+            "name": "SHA512",
+            "file_name": "sha512",
+            "queries": [
+              "sha512"
+            ],
+            "ignore": false,
+            "color":"b",
+            "show":false
+          },
+          {
+            "class": "sha256",
+            "label": "SHA256",
+            "name": "SHA256",
+            "file_name": "sha256",
+            "queries": [
+              "sha256"
+            ],
+
+            "ignore": false,
+            "color":"g",
+            "show":false
+          },
+          {
+            "class": "md5",
+            "label": "MD5",
+            "name": "MD5",
+            "file_name": "md5",
+            "queries": [
+              "md5"
+            ],
+            "ignore": false,
+            "color":"r",
+            "show":true
+          }
+        ],
+        "max_count":200
+      }
+    ]
+  },
+  {
+    "category": "prevent",
+    "sub_categories": [
+      {
+        "class": "authenticate",
+        "label": "Authenticate",
+        "name": "Authenticate",
+        "file_name": "authenticate",
+        "ignore": false,
+        "tactics": [
+          {
+            "queries": [
+              "token authentication"
+            ],
+            "name": "Token Authentication",
+            "class": "token authentication",
+            "label": "Token Authentication",
+            "file_name": "token_authentication",
+            "ignore": false,
+            "color":"r",
+            "show":false
+          },
+          {
+            "queries": [
+              "digest authentication"
+            ],
+            "name": "Digest Authentication",
+            "class": "digest authentication",
+            "label": "Digest Authentication",
+            "file_name": "digest_authentication",
+            "ignore": false,
+            "color":"b",
+            "show":true
+          },
+          {
+            "queries": [
+              "ldap"
+            ],
+            "name": "Lightweight Directory Access Protocol",
+            "class": "ldap",
+            "file_name": "ldap",
+            "label": "LDAP",
+            "ignore": false,
+            "color":"b",
+            "show":false
+          },
+          {
+            "queries": [
+              "kerberos"
+            ],
+            "name": "Kerberos",
+            "class": "kerberos",
+            "label": "Kerberos",
+            "file_name": "kerberos",
+            "ignore": false,
+            "color":"c",
+
+            "show":false
+          },
+          {
+            "queries": [
+              "pap"
+            ],
+            "class": "pap",
+            "file_name": "pap",
+            "label": "PAP",
+            "name": "Password Authentication Protocol",
+            "ignore": true,
+            "color":"m",
+            "show":false
+          },
+          {
+            "name": "Challenge-Handshake Authentication Protocol",
+            "class": "chap",
+            "file_name": "chap",
+            "label": "CHAP",
+            "queries": [
+              "chap"
+            ],
+            "ignore": true,
+            "color":"y",
+            "show":false
+          },
+          {
+            "name": "Extensible Authentication Protocol",
+            "class": "eap",
+            "file_name": "eap",
+            "label": "EAP",
+            "queries": [
+              "eap"
+            ],
+            "ignore": true,
+            "color":"k",
+            "show":false
+          }
+        ],
+        "max_count":200,
+        "color":"g"
+      },
+      {
+        "class": "encrypt_decrypt",
+        "label": "Encrypt Decrypt",
+        "name": "Encrypt Decrypt",
+        "file_name": "encrypt_decrypt",
+        "ignore": false,
+        "tactics": [
+          {
+            "name": "Advanced Encryption Standard",
+            "class": "aes",
+            "file_name": "aes",
+            "label": "AES",
+            "queries": [
+              "aes"
+            ],
+            "ignore": false,
+            "color":"b",
+            "show":false
+          },
+          {
+            "name": "Blowfish",
+            "class": "blowfish",
+            "file_name": "blowfish",
+            "label":"Blowfish",
+            "queries": [
+              "blowfish"
+            ],
+            "ignore": false,
+            "color":"b",
+            "show":false
+          },
+          {
+            "name": "Triple DES",
+             "class": "3des",
+            "file_name": "3des",
+             "label":"3DES",
+            "queries": [
+              "3des"
+            ],
+            "ignore": false,
+            "color":"g",
+            "show":false
+          },
+          {
+            "name": "Rivest-Shamir-Adleman",
+            "class": "rsa",
+            "file_name": "rsa",
+            "label": "RSA",
+            "queries": [
+              "rsa"
+            ],
+            "ignore": false,
+            "color":"r",
+            "show":false
+          }
+        ],
+        "max_count":200,
+        "color":"c"
+      },
+      {
+        "name": "Authorize",
+        "class": "authorize",
+        "label": "Authorize",
+        "file_name": "authorize",
+        "ignore": false,
+        "tactics": [
+          {
+            "queries": [
+              "ldap"
+            ],
+            "name": "Lightweight Directory Access Protocol",
+            "class": "ldap",
+            "file_name": "ldap",
+            "label": "LDAP",
+            "ignore": false,
+            "color":"r",
+            "show":false
+          },
+          {
+            "name": "OAuth 2.0",
+            "class": "oauth2",
+            "file_name": "oauth2",
+            "label": "OAuth 2.0",
+            "queries": [
+              "oauth2"
+            ],
+            "ignore": false,
+            "color":"g",
+            "show":true
+          },
+          {
+            "name": "Access Control List",
+            "class": "acl",
+            "file_name": "acl",
+            "label": "Access Control List",
+            "queries": [
+              "acl"
+            ],
+            "ignore": false,
+            "color":"b",
+            "show":false
+          },
+          {
+            "name": "Privilege Management",
+            "class": "privilege management",
+            "file_name": "privilege_management",
+            "label": "Privilege Management",
+            "queries": [
+              "privilege management"
+            ],
+            "ignore": true,
+            "color":"c",
+            "show":false
+          },
+          {
+            "name": "Session Management",
+            "class": "session management",
+            "file_name": "session_management",
+            "label": "Session Management",
+            "queries": [
+              "session management"
+            ],
+            "ignore": false,
+            "color":"c",
+            "show":true
+          }
+        ],
+        "max_count":200,
+        "color":"b"
+      },
+      {
+        "name": "Input Validation",
+        "class": "input validation",
+        "file_name": "input_validation",
+        "label": "Input Validation",
+        "ignore": true,
+        "tactics": [
+          {
+            "name": "Input Validation",
+            "class": "input validation",
+            "file_name": "input_validation",
+            "label": "Input Validation",
+            "queries": [
+              "validation interceptor"
+            ],
+            "ignore": false,
+            "color":"r",
+            "show":false
+          }
+        ],
+        "max_count":25,
+        "color":"y"
+      },
+      {
+        "name": "Secure Communication",
+        "class": "secure communication",
+        "file_name": "secure_communication",
+        "label": "Secure Communication",
+        "ignore": false,
+        "tactics": [
+          {
+            "name": "SSH File Transfer Protocol",
+            "class": "sftp",
+            "file_name": "sftp",
+            "label": "SFTP",
+            "queries": [
+              "sftp"
+            ],
+            "ignore": false,
+            "color":"m",
+            "show":true
+          },
+          {
+            "name": "Transport Layer Security",
+            "class": "tls",
+            "file_name": "tls",
+            "label": "TLS",
+            "queries": [
+              "tls"
+            ],
+            "ignore": false,
+            "color":"g",
+            "show":false
+          },
+          {
+            "name": "Virtual Private Network",
+            "class": "vpn",
+            "file_name": "vpn",
+            "label": "VPN",
+            "queries": [
+              "vpn"
+            ],
+            "ignore": false,
+            "color":"b",
+
+            "show":false
+          },
+          {
+            "name": "Secure Shell",
+            "class": "ssh",
+            "file_name": "ssh",
+            "label": "SSH",
+            "queries": [
+              "ssh"
+            ],
+            "ignore": false,
+            "color":"c",
+            "show":false
+          }
+        ],
+        "max_count":200,
+        "color":"m"
+      }
+    ]
+  },
+  {
+    "category": "react/recover",
+    "sub_categories": [
+      {
+        "name": "Audit Trail",
+        "class": "audit trail",
+        "file_name": "audit_trail",
+        "label": "Audit Trail",
+        "ignore": true,
+        "tactics": [
+          {
+            "name": "Audit Trail",
+            "class": "audit trail",
+            "file_name": "audit_trail",
+            "label": "Audit Trail",
+            "queries": [
+              "audit"
+            ],
+            "ignore": false,
+            "color":"r",
+            "show":false
+          }
+        ],
+        "max_count":200,
+        "color":"k"
+      },
+      {
+        "name": "block",
+        "ignore": true,
+        "tactics": []
+      },
+      {
+        "name": "isolate",
+        "ignore": true,
+        "tactics": []
+      },
+      {
+        "name": "restore",
+        "ignore": true,
+        "tactics": []
+      }
+    ]
+  }
+]
